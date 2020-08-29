@@ -23,7 +23,7 @@ This version includes a menu with additional selections, which are not required 
 
 1. Compile MakeChange.java and load the program in the Java Runtime Environment of your choice.
 
-2. Upon running, a basic menu will be presented with three (3) options to choose from:
+2. Select from one of the three (3) options on the menu:
 
   * Option One calls the primary Make Change method.  While in this method, user will be prompted to input the purchase price of the object and the amount tendered by the purchaser.  Upon completion of the calculation of the change tendered, user will be given an option to repeat the method immediately by a selection of (y)es or (n)o.
 
