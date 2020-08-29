@@ -28,13 +28,13 @@ public class MakeChange {
 			}
 			else {
 				System.out.println("\nCustomer recieves back:\n");
-				change = twenties(change);
-				change = tens(change);
-				change = fives(change);
-				change = ones(change);
-				change = quarters(change);
-				change = dimes(change);
-				change = nickels(change);
+				change = findDenomination(change, 20.00, "twenty-dollar bill");
+				change = findDenomination(change, 10.00, "ten-dollar bill");
+				change = findDenomination(change, 5.00, "five-dollar bill");
+				change = findDenomination(change, 1.00, "one-dollar bill");
+				change = findDenomination(change, .25, "quarter");
+				change = findDenomination(change, .10, "dime");
+				change = findDenomination(change, .05, "nickel");
 				change = pennies(change);
 			}
 		
@@ -43,7 +43,17 @@ public class MakeChange {
 		input.close();
 	}
 	
-	public static void denomination(int amount, String type) {
+	//method that determines how many of a particular denomination there is, then returns the remaining change for further parsing.
+	//Before returning, this method passes to a sub-method that prints out the type and amount of denomination.
+	public static double findDenomination(double change, double denomNum, String denomType) {
+		int amountOfDenom = (int)(change / denomNum);
+		change = change % denomNum;
+		printDenomination(amountOfDenom, denomType);
+		return change;
+	}
+	
+	//method that prints out the quantity of the denomination, as calculated by the findDenomination();
+	public static void printDenomination(int amount, String type) {
 		if (amount == 0) {
 			System.out.print("");
 		}
@@ -55,62 +65,7 @@ public class MakeChange {
 		}
 	}
 	
-	public static double twenties(double change) {
-	
-		int twenties = (int)(change / 20.00);
-		change = change % 20.00;
-		denomination(twenties, "twenty-dollar bill");
-		return change;
-		
-	}
-	
-	public static double tens(double change) {
-		int tens = (int)(change / 10.00);
-		change = change % 10.00;
-		denomination(tens, "ten-dollar bill");
-		return change;
-	}
-	
-	public static double fives(double change) {
-		
-		int fives = (int)(change / 5.00);
-		change = change % 5.00;
-		denomination(fives, "five-dollar bill");
-		return change;
-	}
-	
-	public static double ones(double change) {
-		
-		int ones = (int)(change / 1.00);
-		change = change % 1.00;
-		denomination(ones, "one-dollar bill");
-		return change;
-	}
-	
-	public static double quarters(double change) {
-		
-		int quarters = (int)(change / .25);
-		change = change % .25;
-		denomination(quarters, "quarter");
-		return change;
-	}
-	
-	public static double dimes(double change) {
-		
-		int dimes = (int)(change / .10);
-		change = change % .10;
-		denomination(dimes, "dime");
-		return change;
-	}
-	
-	public static double nickels(double change) {
-		
-		int nickels = (int)(change / .05);
-		change = change % .05;
-		denomination(nickels, "nickel");	
-		return change;
-	}
-		
+	//created a separate penny method because "penny" does not follow the naming singular/plural constructions of the other denominations.
 	public static double pennies(double change) {
 		
 		int pennies = (int)((change / .01) + .01);
