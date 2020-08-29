@@ -11,33 +11,43 @@ public class MakeChange {
 		while (keepGoing) {
 			
 			menuScreen();
-			
 			String userChoice = userInput.next();
 			switch (userChoice) {
 				
 				case "1": case "one": case "change": case "make change": case "Change": case "Make change": case "Make Change":
-				
-					double price;
-					double tender;
 					
-					do {
-						System.out.print("\nPlease enter the purchase price of the item: $");
-						price = userInput.nextDouble();
-						if (price < 0) {
-							System.out.println("\nPlease enter a price greater than zero.");
+					boolean repeat = true;
+					
+					while (repeat) {
+					
+						double price;
+						double tender;
+					
+						do {
+							System.out.print("\nPlease enter the purchase price of the item: $");
+							price = userInput.nextDouble();
+							if (price < 0) {
+								System.out.println("Enter a number greater than zero.");
+							}
+						} while (price < 0);
+					
+						do {
+							System.out.print("\nPlease enter the amount tendered by the customer: $");
+							tender = userInput.nextDouble();
+							if (tender < 0) {
+								System.out.println("Enter a number greater than zero.");
+							}
+						} while (tender < 0);
+					
+						makeChange(tender, price);
+					
+						System.out.print("\nDo you wish to enter another purchase (y/n)?: ");
+						String anotherPurchase = userInput.next();
+						if (anotherPurchase.equals("n") || anotherPurchase.equals("no")) {
+							repeat = false;
 						}
-					} while (price < 0);
-					
-					do {
-						System.out.print("\nPlease enter the amount tendered by the customer: $");
-						tender = userInput.nextDouble();
-						if (tender < 0) {
-							System.out.println("\nPlease enter an amount greater than zero.");
-						}
-					} while (tender < 0);
-					
-					makeChange(tender, price);
-					break;
+					}
+					break;	
 					
 				case "2": case "two": case "ver": case "info": case "version information": case "Version information": case "Version Information":
 					
@@ -53,15 +63,13 @@ public class MakeChange {
 					System.out.println("Goodbye!");
 					keepGoing = false;
 					break;
-					
 			}
-			
 		}
 		userInput.close();	
 	}
 	
 	public static void makeChange(double tender, double price) {
-			
+		
 		double change = tender - price;
 	
 		if (change < 0) {
@@ -81,7 +89,6 @@ public class MakeChange {
 			change = findDenomination(change, .05, "nickel");
 			change = pennies(change);
 		}
-		
 	}
 	
 	//method that determines how many of a particular denomination there is, then returns the remaining change for further parsing.
@@ -145,5 +152,4 @@ public class MakeChange {
 		System.out.println("");
 		System.out.print("Please make a selection: ");
 	}
-	
 }
