@@ -23,9 +23,9 @@ This is the a first-week assignment from the Skill Distillery coding program.  T
 
 2. Upon running, a basic menu will be presented with three (3) options to choose from:
 
-  * Option One calls the primary Make Change program.  While in this program, user will be prompted to input the purchase price of the object and the amount tendered by the purchaser.  Upon completion of the calculation of the change tendered, user will be given an option to repeat the program immediately by a selection of (y)es or (n)o.
+  * Option One calls the primary Make Change method.  While in this method, user will be prompted to input the purchase price of the object and the amount tendered by the purchaser.  Upon completion of the calculation of the change tendered, user will be given an option to repeat the method immediately by a selection of (y)es or (n)o.
 
-  * Option Two calls a secondary program that displays a fictional company name and version.  Upon displaying this information, the system will reset to the main menu.
+  * Option Two calls a secondary method that displays a fictional company name and version.  Upon displaying this information, the program will reset to the main menu.
 
   * Option Three will exit the program.
 
