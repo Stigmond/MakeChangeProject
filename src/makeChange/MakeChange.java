@@ -11,16 +11,16 @@ public class MakeChange {
 		System.out.print("Please enter the purchase price of the item: $");
 		double price = input.nextDouble();
 		
-		System.out.print("Please enter the amount tendered by the customer: $");
+		System.out.print("\nPlease enter the amount tendered by the customer: $");
 		double tender = input.nextDouble();
 		
 		double change = tender - price;
 		
 		if (change < 0) {
-			System.out.println("Customer has tendered an insufficient amount and cannot make the purchase.");
+			System.out.println("\nCustomer has tendered an insufficient amount and cannot make the purchase.");
 		} 
 		else if (change == 0) {
-			System.out.println("Customer has tendered the exact amount and is due no change.");
+			System.out.println("\nCustomer has tendered the exact amount and is due no change.");
 		}
 		else {
 			System.out.println("\nCustomer recieves back:\n");
@@ -45,10 +45,10 @@ public class MakeChange {
 			System.out.print("");
 		}
 		if (twenties == 1) {
-			System.out.print("1 twenty-dollar bill");
+			System.out.println("1 twenty-dollar bill");
 		}
 		if (twenties > 1) {
-			System.out.print(twenties + " twenty-dollar bills");
+			System.out.println(twenties + " twenty-dollar bills");
 		}
 		
 		return change;
