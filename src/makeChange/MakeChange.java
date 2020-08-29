@@ -12,11 +12,11 @@ public class MakeChange {
 			
 			menuScreen();
 			menu();
-			int userChoice = userInput.nextInt();
+			String userChoice = userInput.next();
 			switch (userChoice) {
 				
-				case 1:
-					
+				case "1": case "one": case "change": case "make change": case "Change": case "Make change": case "Make Change":
+				
 					double price;
 					double tender;
 					
@@ -39,11 +39,12 @@ public class MakeChange {
 					makeChange(tender, price);
 					break;
 					
-				case 2:
+				case "2": case "two": case "ver": case "info": case "version information": case "Version information": case "Version Information":
+					
 					System.out.println("\nStigWare BETA v.1.0");
 					break;
 					
-				case 3:
+				case "3": case "Exit": case "Quit": case "exit": case "quit":
 					System.out.println("Goodbye!");
 					keepGoing = false;
 					break;
