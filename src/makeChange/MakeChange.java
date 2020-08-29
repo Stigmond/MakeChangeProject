@@ -43,37 +43,31 @@ public class MakeChange {
 		input.close();
 	}
 	
+	public static void denomination(int amount, String type) {
+		if (amount == 0) {
+			System.out.print("");
+		}
+		if (amount == 1) {
+			System.out.println("1 " + type);
+		}
+		if (amount > 1) {
+			System.out.println(amount + " " + type + "s");
+		}
+	}
+	
 	public static double twenties(double change) {
-		
+	
 		int twenties = (int)(change / 20.00);
 		change = change % 20.00;
-		if (twenties == 0) {
-			System.out.print("");
-		}
-		if (twenties == 1) {
-			System.out.println("1 twenty-dollar bill");
-		}
-		if (twenties > 1) {
-			System.out.println(twenties + " twenty-dollar bills");
-		}
-		
+		denomination(twenties, "twenty-dollar bill");
 		return change;
-	}
-
-	public static double tens(double change) {
 		
+	}
+	
+	public static double tens(double change) {
 		int tens = (int)(change / 10.00);
 		change = change % 10.00;
-		if (tens == 0) {
-			System.out.print("");
-		}
-		else if (tens == 1) {
-			System.out.println("1 ten-dollar bill");
-		}
-		else {
-			System.out.println(tens + " ten-dollar bills");
-		}
-		
+		denomination(tens, "ten-dollar bill");
 		return change;
 	}
 	
@@ -81,16 +75,7 @@ public class MakeChange {
 		
 		int fives = (int)(change / 5.00);
 		change = change % 5.00;
-		if (fives == 0) {
-			System.out.print("");
-		}
-		else if (fives == 1) {
-			System.out.println("1 five-dollar bill");
-		}
-		else {
-			System.out.println(fives + " five-dollar bills");
-		}
-		
+		denomination(fives, "five-dollar bill");
 		return change;
 	}
 	
@@ -98,16 +83,7 @@ public class MakeChange {
 		
 		int ones = (int)(change / 1.00);
 		change = change % 1.00;
-		if (ones == 0) {
-			System.out.print("");
-		}
-		else if (ones == 1) {
-			System.out.println("1 one-dollar bill");
-		}
-		else {
-			System.out.println(ones + " one-dollar bills");
-		}
-		
+		denomination(ones, "one-dollar bill");
 		return change;
 	}
 	
@@ -115,16 +91,7 @@ public class MakeChange {
 		
 		int quarters = (int)(change / .25);
 		change = change % .25;
-		if (quarters == 0) {
-			System.out.print("");
-		}
-		else if (quarters == 1) {
-			System.out.println("1 quarter");
-		}
-		else {
-			System.out.println(quarters + " quarters");
-		}
-		
+		denomination(quarters, "quarter");
 		return change;
 	}
 	
@@ -132,16 +99,7 @@ public class MakeChange {
 		
 		int dimes = (int)(change / .10);
 		change = change % .10;
-		if (dimes == 0) {
-			System.out.print("");
-		}
-		else if (dimes == 1) {
-			System.out.println("1 dime");
-		}
-		else {
-			System.out.println(dimes + " dimes");
-		}
-		
+		denomination(dimes, "dime");
 		return change;
 	}
 	
@@ -149,19 +107,10 @@ public class MakeChange {
 		
 		int nickels = (int)(change / .05);
 		change = change % .05;
-		if (nickels == 0) {
-			System.out.print("");
-		}
-		else if (nickels == 1) {
-			System.out.println("1 nickel");
-		}
-		else {
-			System.out.println(nickels + " nickels");
-		}
-		
+		denomination(nickels, "nickel");	
 		return change;
 	}
-
+		
 	public static double pennies(double change) {
 		
 		int pennies = (int)((change / .01) + .01);
