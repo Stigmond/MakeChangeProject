@@ -11,7 +11,7 @@ public class MakeChange {
 		while (keepGoing) {
 			
 			menuScreen();
-			menu();
+			
 			String userChoice = userInput.next();
 			switch (userChoice) {
 				
@@ -142,9 +142,8 @@ public class MakeChange {
 		System.out.println(" 1. Make Change");
 		System.out.println(" 2. Version Information");
 		System.out.println(" 3. Exit Program\n");
-	}
-	public static void menu() {
-		
+		System.out.println("");
 		System.out.print("Please make a selection: ");
 	}
+	
 }
