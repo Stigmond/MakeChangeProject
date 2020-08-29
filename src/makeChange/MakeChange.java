@@ -17,18 +17,30 @@ public class MakeChange {
 				
 				case 1:
 					
-					System.out.print("\nPlease enter the purchase price of the item: $");
-					double price = userInput.nextDouble();
-									
-					System.out.print("\nPlease enter the amount tendered by the customer: $");
-					double tender = userInput.nextDouble();
+					double price;
+					double tender;
+					
+					do {
+						System.out.print("\nPlease enter the purchase price of the item: $");
+						price = userInput.nextDouble();
+						if (price < 0) {
+							System.out.println("\nPlease enter a price greater than zero.");
+						}
+					} while (price < 0);
+					
+					do {
+						System.out.print("\nPlease enter the amount tendered by the customer: $");
+						tender = userInput.nextDouble();
+						if (tender < 0) {
+							System.out.println("\nPlease enter an amount greater than zero.");
+						}
+					} while (tender < 0);
 					
 					makeChange(tender, price);
-					
 					break;
 					
 				case 2:
-					System.out.println("\nStigWare BETA v.1.0\n");
+					System.out.println("\nStigWare BETA v.1.0");
 					break;
 					
 				case 3:
