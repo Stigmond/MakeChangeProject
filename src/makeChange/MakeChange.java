@@ -6,40 +6,43 @@ public class MakeChange {
 
 	public static void main(String[] args) {
 		
-		boolean keepGoing = true;
-		Scanner input = new Scanner(System.in);
-		
-		while (keepGoing) {
-			
-				
-			System.out.print("\nPlease enter the purchase price of the item: $");
-			double price = input.nextDouble();
-		
-			System.out.print("\nPlease enter the amount tendered by the customer: $");
-			double tender = input.nextDouble();
-		
-			double change = tender - price;
-		
-			if (change < 0) {
-				System.out.println("\nCustomer has tendered an insufficient amount and cannot make the purchase.");
-			} 
-			else if (change == 0) {
-				System.out.println("\nCustomer has tendered the exact amount and is due no change.");
-			}
-			else {
-				System.out.println("\nCustomer recieves back:\n");
-				change = findDenomination(change, 20.00, "twenty-dollar bill");
-				change = findDenomination(change, 10.00, "ten-dollar bill");
-				change = findDenomination(change, 5.00, "five-dollar bill");
-				change = findDenomination(change, 1.00, "one-dollar bill");
-				change = findDenomination(change, .25, "quarter");
-				change = findDenomination(change, .10, "dime");
-				change = findDenomination(change, .05, "nickel");
-				change = pennies(change);
-			}
+		makeChange();
 		
 		}
-		
+
+	
+	
+	
+	
+	
+	
+	public static void makeChange() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("\nPlease enter the purchase price of the item: $");
+		double price = input.nextDouble();
+	
+		System.out.print("\nPlease enter the amount tendered by the customer: $");
+		double tender = input.nextDouble();
+	
+		double change = tender - price;
+	
+		if (change < 0) {
+			System.out.println("\nCustomer has tendered an insufficient amount and cannot make the purchase.");
+		} 
+		else if (change == 0) {
+			System.out.println("\nCustomer has tendered the exact amount and is due no change.");
+		}
+		else {
+			System.out.println("\nCustomer recieves back:\n");
+			change = findDenomination(change, 20.00, "twenty-dollar bill");
+			change = findDenomination(change, 10.00, "ten-dollar bill");
+			change = findDenomination(change, 5.00, "five-dollar bill");
+			change = findDenomination(change, 1.00, "one-dollar bill");
+			change = findDenomination(change, .25, "quarter");
+			change = findDenomination(change, .10, "dime");
+			change = findDenomination(change, .05, "nickel");
+			change = pennies(change);
+		}
 		input.close();
 	}
 	
@@ -53,15 +56,15 @@ public class MakeChange {
 	}
 	
 	//method that prints out the quantity of the denomination, as calculated by the findDenomination();
-	public static void printDenomination(int amount, String type) {
+	public static void printDenomination(int amount, String denomType) {
 		if (amount == 0) {
 			System.out.print("");
 		}
 		if (amount == 1) {
-			System.out.println("1 " + type);
+			System.out.println("1 " + denomType);
 		}
 		if (amount > 1) {
-			System.out.println(amount + " " + type + "s");
+			System.out.println(amount + " " + denomType + "s");
 		}
 	}
 	
