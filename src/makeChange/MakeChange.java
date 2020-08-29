@@ -55,12 +55,12 @@ public class MakeChange {
 					break;
 					
 				case "3": case "Exit": case "Quit": case "exit": case "quit":
-					System.out.println("Goodbye!");
+					System.out.println("\nGoodbye!");
 					keepGoing = false;
 					break;
 					
 				default:
-					System.out.println("Goodbye!");
+					System.out.println("\nGoodbye!");
 					keepGoing = false;
 					break;
 			}
@@ -95,7 +95,7 @@ public class MakeChange {
 	//Before returning, this method passes to a sub-method that prints out the type and amount of denomination.
 	public static double findDenomination(double change, double denomNum, String denomType) {
 		int amountOfDenom = (int)(change / denomNum);
-		change = change % denomNum;
+		change = (change % denomNum) + .0001;
 		printDenomination(amountOfDenom, denomType);
 		return change;
 	}
