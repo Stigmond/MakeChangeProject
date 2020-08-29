@@ -6,24 +6,49 @@ public class MakeChange {
 
 	public static void main(String[] args) {
 		
-		makeChange();
-		
+		boolean keepGoing = true;
+		Scanner userInput = new Scanner(System.in);
+		while (keepGoing) {
+			
+			menuScreen();
+			menu();
+			int userChoice = userInput.nextInt();
+			switch (userChoice) {
+				
+				case 1:
+					
+					System.out.print("\nPlease enter the purchase price of the item: $");
+					double price = userInput.nextDouble();
+									
+					System.out.print("\nPlease enter the amount tendered by the customer: $");
+					double tender = userInput.nextDouble();
+					
+					makeChange(tender, price);
+					
+					break;
+					
+				case 2:
+					System.out.println("\nStigWare BETA v.1.0\n");
+					break;
+					
+				case 3:
+					System.out.println("Goodbye!");
+					keepGoing = false;
+					break;
+					
+				default:
+					System.out.println("Goodbye!");
+					keepGoing = false;
+					break;
+					
+			}
+			
 		}
-
+		userInput.close();	
+	}
 	
-	
-	
-	
-	
-	
-	public static void makeChange() {
-		Scanner input = new Scanner(System.in);
-		System.out.print("\nPlease enter the purchase price of the item: $");
-		double price = input.nextDouble();
-	
-		System.out.print("\nPlease enter the amount tendered by the customer: $");
-		double tender = input.nextDouble();
-	
+	public static void makeChange(double tender, double price) {
+			
 		double change = tender - price;
 	
 		if (change < 0) {
@@ -43,7 +68,7 @@ public class MakeChange {
 			change = findDenomination(change, .05, "nickel");
 			change = pennies(change);
 		}
-		input.close();
+		
 	}
 	
 	//method that determines how many of a particular denomination there is, then returns the remaining change for further parsing.
@@ -85,5 +110,28 @@ public class MakeChange {
 		
 		return change;
 	}
-	
+
+	public static void menuScreen() {
+		
+		System.out.println("\nShop Smart, Shop...");
+		System.out.println("");
+		System.out.println("**************************************************");
+		System.out.println("**************************************************");
+		System.out.println("****                                     ***      ");
+		System.out.println("**********     ******* ******* ******* 	 ***      ");
+		System.out.println("********** *** ******* *** *** **   **   ***      ");
+		System.out.println("     ***** *** ** * ** **   ** **  **    ***      ");
+		System.out.println("**********     ** * ** ******* **   **   ***      ");
+		System.out.println("**********     ** * ** **   ** **   **   ***      ");
+		System.out.println("");
+		System.out.println("--------------------------------------------------");
+		System.out.println("");
+		System.out.println(" 1. Make Change");
+		System.out.println(" 2. Version Information");
+		System.out.println(" 3. Exit Program\n");
+	}
+	public static void menu() {
+		
+		System.out.print("Please make a selection: ");
+	}
 }
