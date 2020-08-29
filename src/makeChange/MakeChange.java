@@ -51,7 +51,7 @@ public class MakeChange {
 					
 				case "2": case "two": case "ver": case "info": case "version information": case "Version information": case "Version Information":
 					
-					System.out.println("\nStigWare BETA v.1.0");
+					System.out.println("\nStigWare BETA v.1.0. Made with Java 1.8");
 					break;
 					
 				case "3": case "Exit": case "Quit": case "exit": case "quit":

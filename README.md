@@ -2,16 +2,31 @@
 
 ### Overview
 
-This is where I will put a summary of my project.
+This is the a first-week assignment from the Skill Distillery coding program.  The assignment asks for the creation of a program that takes in the purchase price of an item, the amount tendered, and the change return in the form of the various denominations (dollars, quarters, etc).  This program was assigned to allow students to test their knowledge of introductory concepts in Java.
 
 ### Topics
 
-* Taking User Input
-* Casting
-* Methods
-* Anything you are utilizing that would be useful for a reviewer/employer
+* Introduction to Eclipse
+* Introduction to Git/GitHub
+* Creating Scanner(s) / Taking User Input
+* Variable Declaration, Initialization, and Re-assignment
+* Loops (while and do-while)
+* Switches
+* Conditionals
+* Methods (with Parameters and Return Values)
+* Arithmetic statements (including modulo)
+* Data Casting
 
 ### How to Run
 
-1. Instructions
-2. Instructions
+1. Compile MakeChange.java and load the program in the Java Runtime Environment of your choice.
+
+2. Upon running, a basic menu will be presented with three (3) options to choose from:
+
+  a. Option One calls the primary Make Change program.  While in this program, user will be prompted to input the purchase price of the object and the amount tendered by the purchaser.  Upon completion of the calculation of the change tendered, user will be given an option to repeat the program immediately by a selection of (y)es or (n)o.
+
+  b. Option Two calls a secondary program that displays a fictional company name and version.  Upon displaying this information, the system will reset to the main menu.
+
+  c. Option Three will exit the program.
+
+3. Have Fun!
