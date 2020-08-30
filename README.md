@@ -2,7 +2,7 @@
 
 ### Overview
 
-This is the first-week assignment from the Skill Distillery Java Bootcamp.  The assignment asks for the creation of a program that takes in the purchase price of an item, the amount tendered, and the change returned in the form of the various denominations (dollars, quarters, etc).  This program was assigned to allow students to test their knowledge of introductory concepts in Java.  
+This is a first-week assignment from the Skill Distillery Java Bootcamp.  This assignment asks for the creation of a program that takes in the purchase price of an item, the amount tendered, and the change returned in the form of optimal denominations (dollars, quarters, etc).  This program was assigned to allow students to test their knowledge of introductory concepts in Java.  
 
 This version includes a menu with additional selections, which are not required by the core assignment.
 

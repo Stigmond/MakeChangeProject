@@ -135,14 +135,14 @@ public class MakeChange {
 		
 		System.out.println("\nShop Smart, Shop...");
 		System.out.println("");
-		System.out.println("  **************************************************");
-		System.out.println("**************************************************");
-		System.out.println("****                                     ***      ");
-		System.out.println("********        ** **   *****  ****** 	 ***      ");
-		System.out.println("  ******** *** ******* *** *** **   **   ***      ");
-		System.out.println("     ***** *** ** * ** **   ** ** ***    ***      ");
-		System.out.println("**********     **   ** ******* **   **   ***      ");
-		System.out.println(" *******       **   ** **   ** **   **   ***      ");
+		System.out.println("   **************************************************");
+		System.out.println(" **************************************************");
+		System.out.println(" ****                                     ***      ");
+		System.out.println(" ********        ** **   *****  ****** 	  ***      ");
+		System.out.println("   ******** *** ******* *** *** **   **   ***      ");
+		System.out.println("       **** *** ** * ** **   ** ** ***    ***      ");
+		System.out.println("***********     **   ** ******* **   **   ***      ");
+		System.out.println("  *******       **   ** **   ** **   **   ***      ");
 		System.out.println("");
 		System.out.println("--------------------------------------------------");
 		System.out.println("");
