@@ -21,7 +21,7 @@ This version includes a menu with additional selections, which are not required 
 
 ### How to Run
 
-1. Compile MakeChange.java and load the program in the Java Runtime Environment of your choice.
+1. Compile and/or run MakeChange.java in a compatible IDE or Java Runtime Environment of your choice.
 
 2. Select from one of the three (3) options on the menu:
 

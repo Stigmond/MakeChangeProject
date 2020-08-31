@@ -94,6 +94,7 @@ public class MakeChange {
 	//method that determines how many of a particular denomination there is, then returns the remaining change for further parsing.
 	//Before returning, this method passes to a sub-method that prints out the type and amount of denomination.
 	public static double findDenomination(double change, double denomNum, String denomType) {
+		
 		int amountOfDenom = (int)(change / denomNum);
 		change = (change % denomNum) + .0001;
 		printDenomination(amountOfDenom, denomType);
@@ -102,6 +103,7 @@ public class MakeChange {
 	
 	//method that prints out the quantity of the denomination, as calculated by the findDenomination();
 	public static void printDenomination(int amount, String denomType) {
+		
 		if (amount == 0) {
 			System.out.print("");
 		}
